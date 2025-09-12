@@ -1,0 +1,284 @@
+
+ 
+ 
+ 
+ 
+1.1  Background and Necessity of the 
+System  
+With  the  rapid  growth  of  digital  communication  and  online  services,  ensuring 
+the security and privacy of information exchange has become critically 
+important. Cyber threats such as eavesdropping, data interception, and message 
+tampering  pose  significant  risks  to  individuals  and  organizations  alike.  Public 
+Key  Encryption  (PKE)  plays  a  vital  role  in  defending  against  these  threats  by 
+providing mechanisms to securely exchange information, authenticate parties, 
+and guarantee message integrity. 
+ 
+The simulation of this project demonstrates key PKE applications such as secure 
+email, VPN encryption, and digital signatures to ensure confidentiality, secure 
+key exchange, and authenticity. It helps users and developers understand how 
+PKE protects against unauthorized access and builds trust in digital 
+communication.  The  project  emphasizes  the  importance  of  PKE  for  securing 
+modern communication and safeguarding sensitive data from cyber threats. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1.2  Proposed Solution  
+The proposed solution ‘CipherGuard’ leverages PKE to secure various aspects 
+of digital communication. It starts with simulating secure email communication, 
+where the sender encrypts the message using the recipient’s public key, ensuring 
+that only the intended recipient can decrypt and read it. This demonstrates the 
+use of asymmetric encryption to maintain confidentiality in message exchange.  
+ 
+The  first  key  scenario  is  VPN  encryption,  where  protocols  like  Secure  Sockets 
+Layer/Transport Layer Security (SSL/TLS) or Internet Protocol Security (IPsec) 
+are used. These protocols use the PKE during the handshake phase to securely 
+exchange  symmetric  session  keys.  After  the  secure  key  exchange,  symmetric 
+encryption efficiently protects data transmitted through the VPN tunnel, creating 
+a private and secure communication channel over public networks. 
+ 
+The  second  scenario  involves  digital  signatures,  where  the  sender  signs  a 
+message with their private key, and the receiver verifies the signature using the 
+sender’s public key. This process ensures the message’s integrity, authenticates 
+the sender’s identity, and provides  non-repudiation.  Together,  these  scenarios 
+illustrate how Public Key Encryption (PKE) can comprehensively secure digital 
+communications. VPN encryption primarily focuses on enabling confidentiality 
+and  secure  key  exchange  by  creating  a  private,  encrypted  communication 
+tunnel. Digital signatures, on the other hand, provide message authenticity and 
+non-repudiation by verifying the sender’s identity and ensuring the integrity of 
+the message. 
+ 
+The sample block diagram is depicted as follows: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The project begins with Secure Email Communication using PKE, where an email 
+sender encrypts the message using the recipient’s public key. This ensures that 
+only the recipient, who possesses the corresponding private key, can decrypt and 
+read  the  content,  guaranteeing  confidentiality.  This  process  relies  on  the 
+fundamentals of asymmetric encryption, where the public key is openly shared, 
+but  only  the  private  key  holder  can  unlock  the  information,  thereby  also 
+authenticating the communication. 
+ 
+Next,  the  project  explores  VPN  Encryption  and  Secure  Tunnel  Establishment, 
+focusing on how VPN protocols such as SSL/TLS or IPsec leverage PKE during 
+the  handshake  phase.  In  this  step,  public  key  encryption  is  used  to  securely 
+exchange symmetric session keys between the communicating parties. After this 
+secure  exchange,  the  system  switches  to  symmetric  encryption,  which  is 
+computationally  more  efficient  for  encrypting  the  bulk  of  the  data  transmitted 
+through  the  VPN.  This  creates  a  secure,  encrypted  tunnel  that  protects  data 
+privacy and integrity during communication. 
+ 
+Finally, the project demonstrates Digital Signatures for Data Integrity and Non-
+Repudiation, where the sender creates a digital signature by encrypting a hash 
+of the message with their private key. The recipient then, uses the sender’s public 
+key to verify the signature, confirming that the message has not been tampered 
+with and that it genuinely originated from the sender. This mechanism not only 
+ensures  data  integrity  and  authentication  but  also  provides  non-repudiation, 
+meaning the sender cannot later deny having sent the message. 
+ 
+A comparison between VPN encryption and digital signature methods should be 
+provided to evaluate their effectiveness and state which method is better. 
+ 
+1.3  Purpose of the Document  
+The  purpose  of  this  document  is  to  provide  a  comprehensive  description  of  a 
+simulation-based  system,  titled  ‘CipherGuard’,  developed  to  demonstrate  the 
+practical applications and effectiveness of PKE in securing digital 
+communications.  
+This document is intended for stakeholders and developers, including 
+cybersecurity  educators,  network  administrators,  software  developers,  and 
+security  professionals  to  help  them  understand  how  PKE  can  protect  against 
+unauthorized access, ensure data confidentiality, enable secure key exchange, 
+and  verify  message  authenticity.  By  illustrating  real-world  scenarios  such  as 
+secure email, VPN encryption, and digital signatures it aims to promote better 
+design and implementation of secure communication systems. 
+ 
+ 
+ 
+ 
+ 
+1.4  Scope of Project  The simulation-based project ‘CipherGuard’ is a practical and educational tool 
+designed to demonstrate the applications and benefits of PKE in securing digital 
+communication.  
+The scope of the project includes developing a system that simulates three key 
+scenarios:  safe  email  communication  using  PKE,  VPN  encryption,  and  secure 
+tunnel  establishment.  The  tunnel  establishment  can  be  done  through  key 
+exchange, and digital signature creation and verification for data integrity and 
+non-repudiation.  
+The project should support visualizations of encryption, decryption, and 
+signature  verification  processes.  This  will  help  users  to  understand  how  PKE 
+protects confidentiality, enables secure key exchange, and authenticates 
+messages.  
+The project aims to raise awareness of cryptographic security methods, support 
+cybersecurity education, and promote the adoption of robust encryption 
+techniques in real-world communication systems.  
+ 
+ 
+1.5  Constraints  
+The ‘CipherGuard’ system must operate within a controlled and secure 
+environment to ensure ethical use and prevent unauthorized access. It simulates 
+encryption processes and relies on simplified models of cryptographic protocols, 
+ 
+ 
+ 
+ 
+which may not fully capture all complexities of real-world implementations. The 
+project requires specific software libraries and computational resources capable 
+of handling encryption algorithms like RSA.  
+Additionally,  the  simulations  focus  on  educational  demonstration  rather  than 
+providing actual security for live communications. Improper use or 
+misunderstanding of the system’s scope may lead to overconfidence in security 
+measures without considering other practical factors. 
+ 
+1.6  Functional Requirements  
+Following are the functional requirements of the system: 
+ 
+i. Secure Email Encryption Simulation – The system shall simulate the 
+encryption of email messages using the recipient’s public key, ensuring 
+that only the intended recipient can decrypt and read the message. 
+ 
+ii. VPN  Handshake  and  Tunnel  Establishment  –  It  shall  simulate  the 
+VPN  handshake  process  using  Public  Key  Encryption  to  securely 
+exchange symmetric session keys, followed by establishing an 
+encrypted communication tunnel for data transfer. 
+ 
+iii. Digital  Signature  Creation  and  Verification  –  The  system  shall 
+demonstrate  the  creation  of  digital  signatures.  This  can  be  done  by 
+signing  message  hashes  with  a  sender’s  private  key  and  verifying 
+signatures using sender’s public key to ensure message integrity and 
+authenticity. 
+ 
+iv. Encryption and Decryption Visualization – The system shall provide 
+a graphical interface to visualize the encryption and decryption 
+processes  in  email  communication,  VPN  tunnel  creation,  and  digital 
+signature verification. 
+ 
+v. Tool-based  Simulation  –  The  system  uses  pre-built  tools  such  as 
+OpenSSL  for  key  generation/encryption  demos,  GnuPG  for  email 
+encryption simulation, or Wireshark for visualizing VPN-like key 
+exchanges.  Emphasis  is  placed  on  command-line  demonstrations  or 
+lightweight scripting (example, Bash) to show cryptographic workflows 
+with minimal or no custom code. 
+ 
+ 
+ 
+ 
+Note: Simulations should leverage existing cryptographic tools without requiring 
+original code development.  
+vi. Confidentiality  and  Authentication  Demonstration  –  The  system 
+shall  show  how  Public  Key  Encryption  ensures  confidentiality  of 
+messages and authenticates senders, preventing unauthorized access 
+and forgery. 
+ 
+vii. Comparison  and  Analysis  Module  –  The  system  shall  compare  VPN 
+encryption and digital signatures, highlighting roles in securing 
+communication and indicating which suits specific security goals. The 
+comparison must use metrics like performance overhead, 
+confidentiality vs. authenticity, and implementation ease. 
+ 
+viii. Simulation Controls and Logging – The system shall allow users to 
+start, pause, and stop encryption simulations, log all 
+encryption/decryption events, key exchanges, and signature 
+verifications, and provide detailed reports for educational purposes. 
+ 
+Over  and  beyond  this,  the  CipherGuard  system  should  implement  following 
+functionalities: 
+i. Real-time updates and summaries of encryption activities displayed on 
+the user interface for clear understanding. 
+ii. Secure  storage  of  simulated  keys  and messages  within  the  system  to 
+prevent unauthorized access during demonstrations. 
+iii. Capability  for  users  to  modify  input  messages  and  observe  how 
+encryption and signing processes respond, aiding in interactive 
+learning. 
+ 
+ 
+ 
+ 
+ 
+  
+1.7  Non-Functional Requirements  
+Security: The system must operate within a secure and controlled environment 
+to  prevent  unauthorized  access  to  simulated  keys,  messages,  or  encryption 
+processes.  All  stored  or  transmitted  simulation  data  should  be  protected  to 
+maintain confidentiality and integrity during demonstrations. 
+ 
+Performance:  The  system  should  efficiently  process  and  visualize  encryption, 
+decryption, key exchange, and digital signature verification with minimal delay, 
+providing smooth real-time feedback to users without impacting system stability. 
+ 
+Reliability:  The  system  must  maintain  consistent  operation  throughout  all 
+simulation  scenarios,  ensuring  that  encryption  and  decryption  processes,  key 
+management, and signature verification execute correctly and without 
+interruption. 
+ 
+Usability:  The  user  interface  should  be  user-friendly  and  intuitive,  with  clear 
+visualizations  and  controls  that  allow  users  to  easily  follow  encryption  flows, 
+compare  methods,  and  analyze  simulation  results  without  requiring  advanced 
+technical knowledge. 
+ 
+ 
+ 
+ 
+ 
+Maintainability: The system’s design and codebase should be modular and well-
+documented,  facilitating  easy  updates,  debugging,  and  the  addition  of  new 
+encryption algorithms or communication scenarios in the future. 
+ 
+Portability: The simulation system should be deployable across various 
+platforms  and  operating  systems,  including  different  hardware  configurations 
+and virtual machines, with minimal setup or configuration required. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+These are the bare minimum expectations from the project. It is a 
+must to implement the FUNCTIONAL and NON-FUNCTIONAL 
+requirements given in this SRS. 
+ 
+Once  they  are  complete,  you  can  use  your  own  creativity  and 
+imagination to add more features if required. 
+ 
+Do  NOT  copy  content  or  code  from  GPTs  or  other  AI  tools, 
+although you are permitted to use images generated by AI tools for 
+any visual representation purposes. It is mandatory to mention such 
+tools used in case you add any AI generated images. 
+
+
+1.8  Project Deliverables  
+You will design and build the project and submit it along with a complete project 
+report that includes: 
+ 
+● Problem Definition 
+● Design Specifications 
+ 
+ 
+ 
+ 
+● Diagrams for various Activities 
+● List of commands used and their order 
+● Presentation demonstrating various steps performed 
+● Recorded Video showing actual working of the system 
+ 
+ 
+The consolidated project will be submitted as a zip file with a ReadMe.doc file 
+listing assumptions (if any) made at your end. Documentation is a very important 
+part of the project hence, all crucial aspects of the project must be documented 
+properly. 
