@@ -1,0 +1,38 @@
+Return-Path: <sender@example.com>
+Delivered-To: recipient@example.com
+Received: from mail.example.com (mail.example.com [192.168.1.100])
+	by mx.example.com (Postfix) with ESMTP id 12345ABCDE
+	for <recipient@example.com>; Mon, 11 Sep 2023 10:30:00 +0000 (UTC)
+From: sender@example.com
+To: recipient@example.com
+Subject: Confidential Business Proposal - Encryption Test
+Date: Mon, 11 Sep 2023 10:30:00 +0000
+Message-ID: <test123@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Dear Recipient,
+
+This is a test email message for demonstrating CipherGuard's email encryption capabilities.
+
+CONFIDENTIAL INFORMATION:
+- Project codename: Phoenix
+- Budget allocation: $2.5M
+- Timeline: Q4 2023 - Q2 2024
+- Key stakeholders: Alice, Bob, Charlie
+
+This email contains sensitive business information that requires:
+✓ End-to-end encryption using PKE
+✓ Digital signatures for authenticity
+✓ Secure key exchange protocols
+✓ Non-repudiation guarantees
+
+The CipherGuard system will encrypt this email using the recipient's public key,
+ensuring that only the intended recipient can decrypt and read the contents.
+
+Best regards,
+Test Sender
+
+---
+This message was encrypted using CipherGuard Advanced Cryptographic Security Suite

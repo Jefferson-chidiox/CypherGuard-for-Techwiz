@@ -1,0 +1,17 @@
+This is a sample text document for testing CipherGuard's file encryption capabilities.
+
+The document contains sensitive information that needs to be protected using advanced cryptographic methods.
+
+Key features being tested:
+- RSA public key encryption
+- AES symmetric encryption for large data
+- Digital signatures for integrity
+- Secure key exchange protocols
+
+This file will be encrypted using the CipherGuard system to demonstrate:
+1. Confidentiality - Only authorized recipients can decrypt
+2. Integrity - Any tampering will be detected
+3. Authentication - Sender identity is verified
+4. Non-repudiation - Sender cannot deny sending
+
+Test completed successfully!

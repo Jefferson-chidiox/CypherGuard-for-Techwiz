@@ -1,0 +1,4 @@
+cryptography>=41.0.0
+matplotlib>=3.7.0
+tkinter
+numpy>=1.24.0
