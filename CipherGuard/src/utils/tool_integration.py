@@ -163,7 +163,7 @@ class CryptographicToolIntegration:
                 "TLS handshake completed successfully",
                 "RSA key exchange used for session key",
                 "AES-256-GCM cipher suite negotiated",
-                "All subsequent traffic encrypted"
+                "All following traffic encrypted"
             ],
             "tool": "Wireshark (Simulated)"
         }
@@ -274,8 +274,6 @@ class CryptographicToolIntegration:
             import shutil
             shutil.rmtree(self.temp_dir)
         except (OSError, PermissionError) as e:
-            # Log specific cleanup errors for debugging
             print(f"Warning: Failed to cleanup temporary directory: {e}")
         except Exception as e:
-            # Log unexpected errors but don't fail silently
             print(f"Unexpected error during cleanup: {e}")

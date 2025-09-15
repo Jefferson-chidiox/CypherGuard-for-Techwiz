@@ -3,7 +3,8 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from gui.complete_modern_gui import CompleteCipherGuardGUI
+from gui.splash_screen import CipherGuardSplashScreen
+from gui.gui import CompleteCipherGuardGUI
 from simulations.email_sim import SecureEmailSimulation
 from simulations.vpn_sim import VPNSimulation
 from simulations.digital_signature import DigitalSignature
@@ -12,20 +13,27 @@ from analysis.comparison import SecurityMethodComparison
 
 class CipherGuardApp:
     def __init__(self):
-        self.root = tk.Tk()
+        self.root = None
+        self.gui = None
         
-        # Initialize simulation engines first
+        # Initialize simulation engines
         self.email_sim = SecureEmailSimulation()
         self.vpn_sim = VPNSimulation()
         self.signature_engine = DigitalSignature()
         self.message_storage = MessageStorage()
         self.comparison_engine = SecurityMethodComparison()
+    
+    def initialize_main_application(self):
+        """Initialize the main application after splash screen"""
+        self.root = tk.Tk()
         
         # Create GUI after initializing backends
         self.gui = CompleteCipherGuardGUI(self.root)
         
         # Connect GUI to backend
         self.connect_gui_handlers()
+        
+        return self.root
     
     def create_delete_document_handler(self):
         """Create a handler for deleting signed documents"""
@@ -58,7 +66,7 @@ class CipherGuardApp:
             get_status=lambda: self.vpn_sim.get_status()
         )
         
-        # Set up signature handlers with enhanced document management
+        # Set up signature handlers with document management
         self.gui.set_signature_handlers(
             generate_keys=self.signature_engine.generate_keys,
             sign=self.signature_engine.sign_document,
@@ -72,14 +80,20 @@ class CipherGuardApp:
             delete_document=self.create_delete_document_handler()
         )
         
-        # Set up message storage handler
-        self.gui.set_message_storage_handler(self.message_storage)
         
         # Set up comparison handler
         self.gui.set_comparison_handler(self.comparison_engine.generate_comparison_chart)
     
     def run(self):
-        self.root.mainloop()
+        """Start the application with splash screen"""
+        def launch_main_app():
+            """Callback to launch main application after splash"""
+            main_root = self.initialize_main_application()
+            main_root.mainloop()
+        
+        # Show splash screen first
+        splash = CipherGuardSplashScreen(launch_main_app)
+        splash.show()
 
 if __name__ == "__main__":
     app = CipherGuardApp()

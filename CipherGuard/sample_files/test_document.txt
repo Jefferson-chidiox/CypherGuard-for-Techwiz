@@ -8,10 +8,8 @@ Key features being tested:
 - Digital signatures for integrity
 - Secure key exchange protocols
 
-This file will be encrypted using the CipherGuard system to demonstrate:
+This file could be encrypted using the CipherGuard system to demonstrate:
 1. Confidentiality - Only authorized recipients can decrypt
 2. Integrity - Any tampering will be detected
 3. Authentication - Sender identity is verified
 4. Non-repudiation - Sender cannot deny sending
-
-Test completed successfully!

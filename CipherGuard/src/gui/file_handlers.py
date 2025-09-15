@@ -208,8 +208,10 @@ class FileHandlerMixin:
                     if result['status'] == 'success':
                         # Save decrypted file
                         base_name = os.path.splitext(self.selected_file_path)[0]
-                        if base_name.endswith('_encrypted'):
+                        if base_name and base_name.endswith('_encrypted'):
                             base_name = base_name[:-10]  # Remove '_encrypted'
+                        elif not base_name:
+                            base_name = "decrypted_file"
                         decrypted_file_path = f"{base_name}_decrypted.txt"
                         
                         with open(decrypted_file_path, 'w', encoding='utf-8') as f:

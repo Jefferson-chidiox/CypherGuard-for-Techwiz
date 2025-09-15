@@ -6,7 +6,6 @@ from datetime import datetime
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
-from gui.visualizations import ProcessFlowVisualization
 from utils.tool_integration import CryptographicToolIntegration
 
 class CipherGuardGUI:
@@ -61,10 +60,6 @@ class CipherGuardGUI:
         notebook.add(self.storage_frame, text='Message Storage')
         self.create_storage_tab()
         
-        # Process Visualization Tab
-        self.visualization_frame = ttk.Frame(notebook)
-        notebook.add(self.visualization_frame, text='Process Visualization')
-        self.create_visualization_tab()
         
         # Tools Demo Tab
         self.tools_frame = ttk.Frame(notebook)
@@ -595,14 +590,6 @@ class CipherGuardGUI:
         except Exception as e:
             messagebox.showerror("Error", f"Comparison failed: {str(e)}")
     
-    def create_visualization_tab(self):
-        """Create the process visualization tab"""
-        try:
-            self.process_viz = ProcessFlowVisualization(self.visualization_frame)
-        except Exception as e:
-            # Fallback if visualization fails
-            ttk.Label(self.visualization_frame, 
-                     text=f"Visualization unavailable: {str(e)}").pack(pady=20)
     
     def create_tools_tab(self):
         """Create the cryptographic tools demonstration tab"""

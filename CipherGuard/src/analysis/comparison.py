@@ -121,14 +121,14 @@ class SecurityMethodComparison:
         return complexity_levels.get(method, 50)
     
     def generate_comparison_chart(self):
-        """Generate VPN Encryption vs Digital Signatures comparison as per SRS requirement"""
+        """Generate VPN Encryption vs Digital Signatures comparison"""
         # Focus on VPN Encryption vs Digital Signatures comparison
         vpn_analysis = self._analyze_vpn_encryption()
         signature_analysis = self._analyze_digital_signatures()
         
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 8))
         
-        # Comparison metrics as required by SRS
+        # Comparison metrics
         categories = ['Performance\nOverhead', 'Confidentiality', 'Authenticity', 'Implementation\nEase']
         vpn_scores = [90, 95, 60, 70]  # VPN strengths: low overhead, high confidentiality
         sig_scores = [70, 40, 95, 80]  # Signature strengths: high authenticity
@@ -201,7 +201,7 @@ class SecurityMethodComparison:
         }
     
     def get_comparison_analysis(self):
-        """Generate detailed comparison analysis as required by SRS"""
+        """Generate comparison analysis"""
         vpn_data = self._analyze_vpn_encryption()
         sig_data = self._analyze_digital_signatures()
         
